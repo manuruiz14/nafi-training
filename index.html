@@ -23,6 +23,7 @@
       <a href="#inicio">Inicio</a>
       <a href="#pilares">Pilares</a>
       <a href="#metodologia">Metodología</a>
+      <a href="#indumentaria">Indumentaria</a>
       <a href="#contacto">Contacto</a>
     </nav>
 
@@ -46,26 +47,32 @@
     </div>
 
     <div class="container hero-inner">
-      <p class="eyebrow reveal">Entrenamiento de fuerza basado en evidencia</p>
-      <h1 class="reveal">Tu Rendimiento y Salud No Son Cuestión de Suerte, Sino de Ciencia.</h1>
-      <p class="hero-copy reveal">
-        Aquí no creemos en las planificaciones genéricas de internet ni en los métodos improvisados que solo sirven para perfiles perfectos.
-        Este es un espacio diseñado para exprimir tu máximo potencial físico, sin importar tu punto de partida.
-        Si eres un deportista de élite buscando décimas de segundo en tu disciplina, un atleta avanzado intentando romper un estancamiento,
-        o alguien que acaba de decidir dar su primer paso en el mundo de las pesas, estás en el lugar correcto.
-        Adaptamos la programación de la fuerza para que mejore directamente tu rendimiento específico, proteja tus articulaciones y acelere tus resultados.
-      </p>
+      <div class="hero-text">
+        <p class="eyebrow reveal">Entrenamiento de fuerza basado en evidencia</p>
+        <h1 class="reveal">Tu Rendimiento y Salud No Son Cuestión de Suerte, Sino de Ciencia.</h1>
+        <p class="hero-copy reveal">
+          Aquí no creemos en las planificaciones genéricas de internet ni en los métodos improvisados que solo sirven para perfiles perfectos.
+          Este es un espacio diseñado para exprimir tu máximo potencial físico, sin importar tu punto de partida.
+          Si eres un deportista de élite buscando décimas de segundo en tu disciplina, un atleta avanzado intentando romper un estancamiento,
+          o alguien que acaba de decidir dar su primer paso en el mundo de las pesas, estás en el lugar correcto.
+          Adaptamos la programación de la fuerza para que mejore directamente tu rendimiento específico, proteja tus articulaciones y acelere tus resultados.
+        </p>
 
-      <div class="hero-actions reveal">
-        <a href="#pilares" class="btn btn-primary">Descubre tu programa</a>
-        <a href="#contacto" class="btn btn-ghost">Habla con un coach</a>
+        <div class="hero-actions reveal">
+          <a href="#pilares" class="btn btn-primary">Descubre tu programa</a>
+          <a href="#contacto" class="btn btn-ghost">Habla con un coach</a>
+        </div>
+
+        <div class="hero-tags reveal">
+          <span>Deportistas de élite</span>
+          <span>Atletas avanzados</span>
+          <span>Principiantes</span>
+          <span>Salud y longevidad</span>
+        </div>
       </div>
 
-      <div class="hero-tags reveal">
-        <span>Deportistas de élite</span>
-        <span>Atletas avanzados</span>
-        <span>Principiantes</span>
-        <span>Salud y longevidad</span>
+      <div class="hero-media reveal">
+        <img src="assets/hero-deadlift.jpg" alt="Atleta realizando peso muerto con barra en un gimnasio" width="736" height="1307" loading="eager">
       </div>
     </div>
   </section>
@@ -75,12 +82,12 @@
     <div class="container">
       <p class="eyebrow reveal">Programación</p>
       <h2 class="reveal">Nuestros Pilares de Programación</h2>
-      <p class="section-lead reveal">Tres enfoques distintos, un mismo método: la ciencia del entrenamiento de fuerza aplicada a tu contexto individual.</p>
+      <p class="section-lead reveal">Tres enfoques distintos, un mismo método: la ciencia del entrenamiento de fuerza aplicada a tu contexto individual. Elegí el pilar que mejor encaja con vos y completá un breve cuestionario.</p>
 
       <div class="pilares-grid">
 
         <!-- Módulo A -->
-        <article class="pilar-card reveal">
+        <article class="pilar-card reveal" data-pilar="Módulo A — Rendimiento Deportivo Específico">
           <div class="pilar-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none"><path d="M8 24h4M36 24h4M14 24h20M12 17v14M36 17v14M9 20v8M39 20v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
@@ -106,10 +113,11 @@
               <li>Transferencia directa a los gestos mecánicos de tu disciplina deportiva</li>
             </ul>
           </div>
+          <button type="button" class="btn btn-primary pilar-select">Elegir este programa</button>
         </article>
 
         <!-- Módulo B -->
-        <article class="pilar-card reveal">
+        <article class="pilar-card reveal" data-pilar="Módulo B — Composición Corporal">
           <div class="pilar-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none"><path d="M24 6c-6 4-9 10-9 16 0 6 4 12 9 14 5-2 9-8 9-14 0-6-3-12-9-16Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 18v18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
           </div>
@@ -134,10 +142,11 @@
               <li>Maximización del reclutamiento de fibras musculares rápidas de manera eficiente</li>
             </ul>
           </div>
+          <button type="button" class="btn btn-primary pilar-select">Elegir este programa</button>
         </article>
 
         <!-- Módulo C -->
-        <article class="pilar-card reveal">
+        <article class="pilar-card reveal" data-pilar="Módulo C — Salud y Longevidad">
           <div class="pilar-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none"><path d="M24 42s-15-9.3-15-20A9 9 0 0 1 24 15a9 9 0 0 1 15 7c0 10.7-15 20-15 20Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
           </div>
@@ -163,8 +172,73 @@
               <li>Recuperación óptima y mitigación de riesgos</li>
             </ul>
           </div>
+          <button type="button" class="btn btn-primary pilar-select">Elegir este programa</button>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CUESTIONARIO ===== -->
+  <section class="cuestionario" id="cuestionario" hidden>
+    <div class="container">
+      <div class="quiz-card">
+        <div class="quiz-head">
+          <div>
+            <p class="eyebrow">Programa elegido</p>
+            <h2 class="quiz-pilar" id="quiz-pilar"></h2>
+          </div>
+          <button type="button" class="quiz-change" id="quiz-change">Cambiar programa</button>
+        </div>
+
+        <div class="quiz-progress" aria-hidden="true"><span id="quiz-bar"></span></div>
+        <p class="quiz-count" id="quiz-count"></p>
+
+        <form id="quiz-form" novalidate>
+          <fieldset class="quiz-step" data-step="1">
+            <legend>¿Cuál es tu objetivo?</legend>
+            <textarea name="objetivo" rows="4" placeholder="Ej.: mejorar mi salto para el básquet, ganar masa muscular, volver a entrenar después de años…" required></textarea>
+          </fieldset>
+
+          <fieldset class="quiz-step" data-step="2" hidden>
+            <legend>¿Cuál es tu experiencia previa en entrenamiento?</legend>
+            <textarea name="experiencia" rows="4" placeholder="Ej.: nunca entrené, entreno hace 2 años en el gimnasio, hago crossfit 3 veces por semana…" required></textarea>
+          </fieldset>
+
+          <fieldset class="quiz-step" data-step="3" hidden>
+            <legend>¿Dónde entrenás o entrenarías?</legend>
+            <textarea name="lugar" rows="4" placeholder="Ej.: gimnasio completo, en casa con mancuernas, al aire libre…" required></textarea>
+          </fieldset>
+
+          <fieldset class="quiz-step" data-step="4" hidden>
+            <legend>¿Tenés lesiones o molestias?</legend>
+            <div class="quiz-options" role="radiogroup">
+              <label class="quiz-option"><input type="radio" name="lesiones" value="Sí" required><span>Sí</span></label>
+              <label class="quiz-option"><input type="radio" name="lesiones" value="No"><span>No</span></label>
+            </div>
+            <div class="quiz-sub" id="lesiones-detalle" hidden>
+              <label for="lesiones-cuales">¿Cuáles son?</label>
+              <textarea id="lesiones-cuales" name="lesionesCuales" rows="4" placeholder="Contanos qué lesiones o molestias tenés, desde cuándo y si te limitan en algún movimiento."></textarea>
+            </div>
+          </fieldset>
+
+          <p class="quiz-error" id="quiz-error" role="alert"></p>
+
+          <div class="quiz-nav">
+            <button type="button" class="btn btn-ghost" id="quiz-prev">Anterior</button>
+            <button type="button" class="btn btn-primary" id="quiz-next">Siguiente</button>
+            <button type="submit" class="btn btn-primary" id="quiz-submit" hidden>Enviar por WhatsApp</button>
+          </div>
+        </form>
+
+        <div class="quiz-done" id="quiz-done" hidden>
+          <h3>¡Gracias! Ya tenemos tus respuestas.</h3>
+          <p>Se abrió WhatsApp con tu mensaje listo para enviar. Si no se abrió, usá el botón de abajo.</p>
+          <div class="hero-actions">
+            <a href="#" target="_blank" rel="noopener" class="btn btn-primary" id="quiz-wa">Abrir WhatsApp</a>
+            <button type="button" class="btn btn-ghost" id="quiz-restart">Empezar de nuevo</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -201,10 +275,32 @@
     </div>
   </section>
 
+  <!-- ===== INDUMENTARIA ===== -->
+  <section class="indumentaria" id="indumentaria">
+    <div class="container">
+      <h2 class="reveal">Athlete Series '25</h2>
+
+      <div class="galeria-grid">
+        <figure class="galeria-item galeria-item--tall reveal">
+          <img src="assets/indumentaria-duo.jpg" alt="Dos atletas con musculosas Nafi Training, una blanca de espaldas y una negra de frente" width="1374" height="2048" loading="lazy">
+        </figure>
+        <figure class="galeria-item reveal">
+          <img src="assets/indumentaria-peso-muerto.jpg" alt="Atleta con musculosa negra Nafi Training realizando peso muerto" width="1365" height="2048" loading="lazy">
+        </figure>
+        <figure class="galeria-item reveal">
+          <img src="assets/indumentaria-poleas.jpg" alt="Atleta con musculosa blanca Nafi Training entrenando en poleas" width="1365" height="2048" loading="lazy">
+        </figure>
+        <figure class="galeria-item galeria-item--tall reveal">
+          <img src="assets/indumentaria-espalda.jpg" alt="Espalda de la musculosa blanca Nafi Training Athlete Series '25" width="1365" height="2048" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CTA ===== -->
   <section class="cta-final" id="contacto">
     <div class="container cta-inner reveal">
-      <h2>¿Listo para entrenar con base científica?</h2>
+      <h2>¿Listo para entrenar de verdad?</h2>
       <p>Cuéntanos tu punto de partida y tu objetivo. Te diremos qué pilar de programación encaja contigo.</p>
       <div class="hero-actions">
         <a href="https://wa.me/5493364378135" target="_blank" rel="noopener" class="btn btn-primary">Escríbenos por WhatsApp</a>
@@ -227,11 +323,12 @@
       <a href="#inicio">Inicio</a>
       <a href="#pilares">Pilares</a>
       <a href="#metodologia">Metodología</a>
+      <a href="#indumentaria">Indumentaria</a>
       <a href="#contacto">Contacto</a>
     </nav>
 
     <div class="footer-contact">
-      <a href="mailto:hola@nafitraining.com">hola@nafitraining.com</a>
+      <a href="mailto:nahufigueredo77@gmail.com">nahufigueredo77@gmail.com</a>
       <a href="https://wa.me/5493364378135" target="_blank" rel="noopener">+54 9 3364 37-8135</a>
       <div class="social-icons">
         <a href="https://www.instagram.com/nafi_training/" aria-label="Instagram" target="_blank" rel="noopener">
@@ -244,7 +341,7 @@
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>&copy; 2026 Nafi Training. Todos los derechos reservados.</p>
+    <p>&copy ; 2026 Nafi Training. Todos los derechos reservados.</p>
   </div>
 </footer>
 
