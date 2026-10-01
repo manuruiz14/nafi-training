@@ -75,7 +75,7 @@ function validateStep(index) {
   if (radios.length) {
     const checked = step.querySelector('input[type="radio"]:checked');
     if (!checked) return 'Elegí una opción para continuar.';
-    if (checked.value === 'Sí' && !lesionesCuales.value.trim()) {
+    if (checked.name === 'lesiones' && checked.value === 'Sí' && !lesionesCuales.value.trim()) {
       lesionesCuales.focus();
       return 'Contanos cuáles son tus lesiones o molestias.';
     }
@@ -143,7 +143,7 @@ quizForm.addEventListener('submit', (e) => {
   const message = [
     '¡Hola Nafi! Quiero empezar a entrenar.',
     '',
-    `*Programa elegido:* ${selectedPilar}`,
+    `*Plan elegido:* ${selectedPilar}`,
     '',
     `*1. ¿Cuál es tu objetivo?*\n${data.get('objetivo').trim()}`,
     '',
@@ -152,6 +152,8 @@ quizForm.addEventListener('submit', (e) => {
     `*3. ¿Dónde entrenás o entrenarías?*\n${data.get('lugar').trim()}`,
     '',
     `*4. ¿Tenés lesiones o molestias? ¿Cuáles son?*\n${lesiones}`,
+    '',
+    `*5. ¿Querés el plan con videollamadas?*\n${data.get('videollamadas')}`,
   ].join('\n');
 
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
