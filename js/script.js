@@ -64,7 +64,7 @@ function showStep(index) {
   quizNext.hidden = index === quizSteps.length - 1;
   quizSubmit.hidden = index !== quizSteps.length - 1;
   quizError.textContent = '';
-  const field = quizSteps[index].querySelector('textarea');
+  const field = quizSteps[index].querySelector('textarea, input[type="text"]');
   if (field && index > 0) field.focus({ preventScroll: true });
 }
 
@@ -82,7 +82,7 @@ function validateStep(index) {
     return '';
   }
 
-  const field = step.querySelector('textarea');
+  const field = step.querySelector('textarea, input[type="text"]');
   if (!field.value.trim()) {
     field.focus();
     return 'Escribí tu respuesta para continuar.';
@@ -103,7 +103,7 @@ function selectPilar(card) {
   showStep(0);
 
   quizSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  quizSteps[0].querySelector('textarea').focus({ preventScroll: true });
+  quizSteps[0].querySelector('input[type="text"]').focus({ preventScroll: true });
 }
 
 pilarCards.forEach((card) => {
@@ -130,6 +130,13 @@ quizNext.addEventListener('click', () => {
 
 quizPrev.addEventListener('click', () => showStep(currentStep - 1));
 
+quizForm.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && e.target.matches('input[type="text"]')) {
+    e.preventDefault();
+    quizNext.click();
+  }
+});
+
 quizForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const error = validateStep(currentStep);
@@ -145,15 +152,19 @@ quizForm.addEventListener('submit', (e) => {
     '',
     `*Plan elegido:* ${selectedPilar}`,
     '',
-    `*1. ¿Cuál es tu objetivo?*\n${data.get('objetivo').trim()}`,
+    `*1. ¿Cuál es tu nacionalidad?*\n${data.get('nacionalidad').trim()}`,
     '',
-    `*2. ¿Cuál es tu experiencia previa en entrenamiento?*\n${data.get('experiencia').trim()}`,
+    `*2. ¿Cuál es tu objetivo?*\n${data.get('objetivo').trim()}`,
     '',
-    `*3. ¿Dónde entrenás o entrenarías?*\n${data.get('lugar').trim()}`,
+    `*3. ¿Cuántos días a la semana te gustaría entrenar?*\n${data.get('dias')}`,
     '',
-    `*4. ¿Tenés lesiones o molestias? ¿Cuáles son?*\n${lesiones}`,
+    `*4. ¿Cuál es tu experiencia previa en entrenamiento?*\n${data.get('experiencia').trim()}`,
     '',
-    `*5. ¿Querés el plan con videollamadas?*\n${data.get('videollamadas')}`,
+    `*5. ¿Dónde entrenás o entrenarías?*\n${data.get('lugar').trim()}`,
+    '',
+    `*6. ¿Tenés lesiones o molestias? ¿Cuáles son?*\n${lesiones}`,
+    '',
+    `*7. ¿Querés el plan con videollamadas?*\n${data.get('videollamadas')}`,
   ].join('\n');
 
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

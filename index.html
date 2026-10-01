@@ -196,21 +196,39 @@
 
         <form id="quiz-form" novalidate>
           <fieldset class="quiz-step" data-step="1">
+            <legend>¿Cuál es tu nacionalidad?</legend>
+            <input type="text" name="nacionalidad" placeholder="Ej.: argentina, uruguaya, española…" autocomplete="country-name" required>
+          </fieldset>
+
+          <fieldset class="quiz-step" data-step="2" hidden>
             <legend>¿Cuál es tu objetivo?</legend>
             <textarea name="objetivo" rows="4" placeholder="Ej.: mejorar mi salto para el básquet, ganar masa muscular, volver a entrenar después de años…" required></textarea>
           </fieldset>
 
-          <fieldset class="quiz-step" data-step="2" hidden>
+          <fieldset class="quiz-step" data-step="3" hidden>
+            <legend>¿Cuántos días a la semana te gustaría entrenar?</legend>
+            <div class="quiz-options quiz-options--days" role="radiogroup">
+              <label class="quiz-option"><input type="radio" name="dias" value="1" required><span>1</span></label>
+              <label class="quiz-option"><input type="radio" name="dias" value="2"><span>2</span></label>
+              <label class="quiz-option"><input type="radio" name="dias" value="3"><span>3</span></label>
+              <label class="quiz-option"><input type="radio" name="dias" value="4"><span>4</span></label>
+              <label class="quiz-option"><input type="radio" name="dias" value="5"><span>5</span></label>
+              <label class="quiz-option"><input type="radio" name="dias" value="6"><span>6</span></label>
+              <label class="quiz-option"><input type="radio" name="dias" value="7"><span>7</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="quiz-step" data-step="4" hidden>
             <legend>¿Cuál es tu experiencia previa en entrenamiento?</legend>
             <textarea name="experiencia" rows="4" placeholder="Ej.: nunca entrené, entreno hace 2 años en el gimnasio, hago crossfit 3 veces por semana…" required></textarea>
           </fieldset>
 
-          <fieldset class="quiz-step" data-step="3" hidden>
+          <fieldset class="quiz-step" data-step="5" hidden>
             <legend>¿Dónde entrenás o entrenarías?</legend>
             <textarea name="lugar" rows="4" placeholder="Ej.: gimnasio completo, en casa con mancuernas, al aire libre…" required></textarea>
           </fieldset>
 
-          <fieldset class="quiz-step" data-step="4" hidden>
+          <fieldset class="quiz-step" data-step="6" hidden>
             <legend>¿Tenés lesiones o molestias?</legend>
             <div class="quiz-options" role="radiogroup">
               <label class="quiz-option"><input type="radio" name="lesiones" value="Sí" required><span>Sí</span></label>
@@ -222,7 +240,7 @@
             </div>
           </fieldset>
 
-          <fieldset class="quiz-step" data-step="5" hidden>
+          <fieldset class="quiz-step" data-step="7" hidden>
             <legend>¿Querés el plan con videollamadas?</legend>
             <div class="quiz-options" role="radiogroup">
               <label class="quiz-option"><input type="radio" name="videollamadas" value="Sí" required><span>Sí</span></label>
